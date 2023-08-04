@@ -30,11 +30,11 @@ function salvarUser(){
 // funcão para criação de lista na tabela
 
 function criaLista(){
-    let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>";
+    let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Peças a Comprar</th><th>Ações</th></tr>";
 
     // laço de repetição para colocar nomes na tabela
     for(let i=0;i <= (dadosLista.length-1);i++){
-        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn btn-primary' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button><button class='btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button></td></tr>";
+        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='botaoeditar' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button><button class='botaoexcluir' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button></td></tr>";
         
         document.getElementById("tabela").innerHTML = tabela;
     } 
